@@ -5,7 +5,7 @@
     },
     "extends": [
         "plugin:react/recommended",
-        "plugin:prettier/recommend",
+        "plugin:prettier/recommended",
         "plugin:@typescript-eslint/recommended",
         "airbnb"
     ],
