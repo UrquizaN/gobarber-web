@@ -5,7 +5,8 @@ import { ToastMessage, useToast } from '../../../hooks/toast';
 import { Container } from './styles';
 
 interface MessageProps {
-  message: ToastMessage
+  message: ToastMessage;
+  style: any;
 }
 
 const icons = {
@@ -14,7 +15,7 @@ const icons = {
   error: <FiAlertCircle size={24} />,
 };
 
-const Message: React.FC<MessageProps> = ({ message }) => {
+const Message: React.FC<MessageProps> = ({ message, style }) => {
   const { removeToast } = useToast();
 
   useEffect(() => {
@@ -28,7 +29,7 @@ const Message: React.FC<MessageProps> = ({ message }) => {
   }, [message, removeToast]);
 
   return (
-    <Container type={message.type} hasDescription={!!message.description}>
+    <Container type={message.type} hasDescription={!!message.description} style={style}>
       {icons[message.type || 'info']}
 
       <div>
