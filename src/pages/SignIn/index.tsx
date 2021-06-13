@@ -61,7 +61,7 @@ const SignIn: React.FC = () => {
         description: 'Erro ao realizar login. Cheque as credenciais',
       });
     }
-  }, [signIn, addToast]);
+  }, [signIn, history, addToast]);
 
   return (
     <>

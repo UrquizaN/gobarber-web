@@ -63,7 +63,7 @@ const SignUp: React.FC = () => {
         description: 'Erro ao realizar o cadastro. Tente novamente.',
       });
     }
-  }, []);
+  }, [addToast, history]);
 
   return (
     <>
